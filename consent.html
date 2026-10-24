@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Согласие на обработку персональных данных — Tonirovka 126</title>
+  <meta name="description" content="Текст согласия на обработку персональных данных при отправке заявки на сайте Tonirovka 126.">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#1E1E1E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="Tonirovka 126 — на главную">
+        TONIROVKA<span class="logo__accent">126</span>
+      </a>
+      <a href="index.html" class="btn btn--ghost legal__back" aria-label="На главную">← <span class="legal__back-text">На главную</span></a>
+    </div>
+  </header>
+
+  <!--
+    ШАБЛОН. По закону (с 1 сентября 2025 года) согласие на обработку персональных данных
+    оформляется отдельно от других документов — поэтому оно на своей странице,
+    а не внутри политики. Данные мастера подставляются из js/config.js.
+  -->
+  <main class="legal">
+    <div class="container legal__container">
+      <p class="eyebrow">Документы</p>
+      <h1 class="legal__title">Согласие на обработку персональных данных</h1>
+      <p class="legal__meta">Редакция от <span data-config="policyDate">13.10.2026</span></p>
+
+      <p>
+        Отправляя заявку на сайте студии тонировки «Tonirovka 126» и отмечая пункт
+        «Согласен на обработку персональных данных», я свободно, своей волей и в своём интересе
+        даю согласие оператору — <span data-config="ownerName">[Фамилия Имя Отчество мастера]</span>,
+        ИНН <span data-config="ownerInn">[ИНН — 12 цифр]</span>, — на обработку моих персональных данных
+        на следующих условиях.
+      </p>
+
+      <h2>Какие данные</h2>
+      <p>
+        Имя, номер телефона, марка и модель автомобиля, выбранная услуга, желаемая дата
+        и комментарий, которые я указал в форме записи.
+      </p>
+
+      <h2>Для чего</h2>
+      <p>
+        Чтобы оператор связался со мной по заявке, согласовал услугу, стоимость, дату
+        и время записи и ответил на мои вопросы.
+      </p>
+
+      <h2>Что оператор может делать с данными</h2>
+      <p>
+        Сбор, запись, систематизация, хранение, уточнение, использование, удаление и уничтожение —
+        с использованием средств автоматизации и без них. Я согласен на передачу заявки
+        оператору через облачный сервис Yandex Cloud и мессенджер Telegram, в том числе на трансграничную передачу данных
+        на серверы Telegram за пределами Российской Федерации.
+      </p>
+
+      <h2>Срок действия</h2>
+      <p>
+        Согласие действует до достижения целей обработки, но не дольше одного года
+        с момента отправки заявки, либо до его отзыва.
+      </p>
+
+      <h2>Как отозвать согласие</h2>
+      <p>
+        Я могу в любой момент отозвать согласие, написав оператору на
+        <a href="#" data-link="email" data-config="ownerEmail">[email для запросов по персональным данным]</a>
+        <span data-telegram-only>или в Telegram <a href="#" data-link="telegram" data-config="telegramName" target="_blank" rel="noopener"></a></span>.
+        После отзыва оператор удалит мои данные.
+      </p>
+
+      <p>
+        Подробнее о том, как обрабатываются данные, — в
+        <a href="privacy.html">Политике обработки персональных данных</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="footer footer--compact">
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Tonirovka 126. <a href="privacy.html">Политика обработки персональных данных</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <!-- Без этой строки телефон покажет «уменьшенную копию» сайта для компьютера -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO ===== -->
+  <title>Tonirovka 126 — тонировка автомобилей в Ставрополе</title>
+  <meta name="description" content="Тонировка автомобилей в Ставрополе: качественная плёнка, аккуратная работа и точные сроки. Цены, примеры работ, запись онлайн.">
+
+  <!-- Open Graph: как будет выглядеть ссылка на сайт в Telegram, VK, WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tonirovka 126 — тонировка автомобилей">
+  <meta property="og:description" content="Качественная плёнка, аккуратная работа и точные сроки. Запишитесь онлайн.">
+  <!-- ВРЕМЕННО: после покупки домена замени example.ru на свой адрес (нужна полная ссылка) -->
+  <meta property="og:url" content="https://example.ru/">
+  <meta property="og:image" content="https://example.ru/images/og-image.jpg">
+  <!-- 1200×630 — стандартный размер превью для соцсетей и мессенджеров -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ru_RU">
+
+  <!-- Иконка во вкладке браузера -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#1E1E1E">
+
+  <!-- ===== Шрифты (Google Fonts, с поддержкой кириллицы) ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Одна строка БЕЗ defer — выполняется сразу, до того как страница нарисуется.
+       Класс js говорит CSS: «JavaScript работает, можно прятать блоки для анимации появления».
+       Если JS отключён или сломался, класса не будет — и весь контент просто виден -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- defer: скрипты скачиваются сразу, а выполняются после того, как HTML прочитан,
+       и строго по порядку — сначала config.js, потом остальные -->
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+
+  <!-- ===================== ШАПКА ===================== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Tonirovka 126 — на главную">
+        TONIROVKA<span class="logo__accent">126</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Главное меню">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Главная</a></li>
+          <li><a href="#about" class="nav__link">О нас</a></li>
+          <li><a href="#services" class="nav__link">Услуги</a></li>
+          <li><a href="#gallery" class="nav__link">Галерея</a></li>
+          <li><a href="#contacts" class="nav__link">Контакты</a></li>
+        </ul>
+        <!-- Эта кнопка видна только в мобильном меню -->
+        <a href="#booking" class="btn btn--primary nav__cta">Записаться</a>
+      </nav>
+
+      <div class="header__actions">
+        <!-- data-link="telegram": main.js подставит сюда ссылку из config.js -->
+        <a href="#" class="icon-btn" data-telegram-only data-link="telegram" target="_blank" rel="noopener" aria-label="Написать в Telegram">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1-1 .2-1.5L20.6 2.9c.9-.3 1.6.2 1.3 1.4Z"/></svg>
+        </a>
+        <a href="#booking" class="btn btn--primary header__cta">Записаться</a>
+
+        <!-- Бургер: aria-expanded сообщает программам для незрячих, открыто ли меню -->
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================== ГЛАВНАЯ ===================== -->
+    <!-- Фон главного экрана нарисован в CSS (градиенты), картинки не нужны -->
+    <section class="hero" id="home">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow" data-reveal data-reveal-delay="0">Ставрополь · Студия тонировки</p>
+
+          <h1 class="hero__title" data-reveal data-reveal-delay="100">
+            Тонировка
+            <!-- span стал блоком (display: block в CSS), поэтому сам начинается с новой строки -->
+            <span class="hero__title-accent">без компромиссов</span>
+          </h1>
+
+          <p class="hero__text" data-reveal data-reveal-delay="200">
+            Премиальные плёнки, идеально ровные края без пузырей и пыли.
+            Работаю сам — без спешки и конвейера.
+          </p>
+
+          <div class="hero__buttons" data-reveal data-reveal-delay="300">
+            <a href="#booking" class="btn btn--primary btn--lg">Записаться</a>
+            <a href="#" class="btn btn--ghost btn--lg" data-telegram-only data-link="telegram" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1-1 .2-1.5L20.6 2.9c.9-.3 1.6.2 1.3 1.4Z"/></svg>
+              Написать в Telegram
+            </a>
+          </div>
+
+          <ul class="hero__stats" data-reveal data-reveal-delay="400">
+            <li class="hero__stat">
+              <span class="hero__stat-value">5+</span>
+              <span class="hero__stat-label">лет опыта</span>
+            </li>
+            <li class="hero__stat">
+              <span class="hero__stat-value">Сотни</span>
+              <span class="hero__stat-label">затонированных машин</span>
+            </li>
+            <!-- ВРЕМЕННО: сверь время с мастером -->
+            <li class="hero__stat">
+              <span class="hero__stat-value">2–3 ч</span>
+              <span class="hero__stat-label">задняя полусфера</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Карточка «Подберите затемнение» (видна на экранах от 992px).
+             Каждая кнопка хранит свои данные в data-атрибутах:
+             data-tint — насколько затемнить стекло (0 — прозрачное, 1 — чёрное),
+             data-text — подпись под окном. main.js читает их при клике. -->
+        <div class="tint-card" data-reveal data-reveal-delay="350">
+          <p class="tint-card__label">Подберите затемнение</p>
+
+          <div class="tint-card__window">
+            <div class="tint-card__glass" id="tint-glass"></div>
+            <span class="tint-card__value" id="tint-value">20%</span>
+          </div>
+
+          <div class="tint-card__options" role="group" aria-label="Светопропускание плёнки">
+            <button class="tint-card__option" type="button" aria-pressed="false" data-tint="0.3" data-text="Лёгкое затемнение — салон хорошо виден снаружи">50%</button>
+            <button class="tint-card__option" type="button" aria-pressed="false" data-tint="0.5" data-text="Умеренное — днём салон просматривается">35%</button>
+            <button class="tint-card__option is-active" type="button" aria-pressed="true" data-tint="0.68" data-text="Заметное — салон виден с трудом, меньше бликов">20%</button>
+            <button class="tint-card__option" type="button" aria-pressed="false" data-tint="0.8" data-text="Сильное — приватность и защита от солнца">15%</button>
+            <button class="tint-card__option" type="button" aria-pressed="false" data-tint="0.92" data-text="«Лимузин» — максимум приватности">5%</button>
+          </div>
+
+          <!-- aria-live: экранный диктор прочитает новый текст, когда он поменяется -->
+          <p class="tint-card__desc" id="tint-desc" aria-live="polite">Заметное — салон виден с трудом, меньше бликов</p>
+          <p class="tint-card__note">Лобовое и передние боковые стёкла — только в рамках закона: светопропускание не ниже 70%.</p>
+        </div>
+      </div>
+
+      <!-- Подсказка «листайте вниз». aria-hidden: для экранных дикторов это лишний шум -->
+      <a href="#about" class="hero__scroll" aria-hidden="true" tabindex="-1">
+        <span class="hero__scroll-line"></span>
+      </a>
+    </section>
+
+    <!-- ===================== О НАС ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__text" data-reveal>
+            <p class="eyebrow">О мастере</p>
+            <h2 class="section__title">Работаю сам — поэтому отвечаю за каждый миллиметр</h2>
+
+            <!-- ВРЕМЕННО: текст-пример. Замени на реальную историю мастера -->
+            <p class="about__lead">
+              Tonirovka 126 — частная студия, а не поток. Ваш автомобиль от начала до конца
+              тонирует один мастер с опытом больше 5 лет.
+            </p>
+            <p class="about__paragraph">
+              Я не беру по пять машин в день: каждое стекло мою, обезжириваю и проверяю
+              при ярком свете, прежде чем отдать машину владельцу. Поэтому плёнка ложится
+              без пыли и пузырей и служит годами.
+            </p>
+
+            <ul class="checklist">
+              <li class="checklist__item">Чистый тёплый бокс — плёнка клеится без пыли</li>
+              <li class="checklist__item">Перед работой покажу образцы плёнок на вашем стекле</li>
+              <li class="checklist__item">Аккуратно сниму старую тонировку без следов клея</li>
+            </ul>
+          </div>
+
+          <!-- figure — «иллюстрация с подписью»: правильный тег для фото, которое поясняет текст.
+               loading="lazy": фото загрузится, только когда человек до него долистает.
+               width и height нужны, чтобы браузер заранее оставил место и страница не «прыгала» -->
+          <figure class="about__media" data-reveal>
+            <img src="images/about.jpg" alt="Мастер Tonirovka 126 за работой"
+                 width="1000" height="1250" loading="lazy">
+            <figcaption class="about__badge">
+              <span class="about__badge-value">5+</span>
+              <span class="about__badge-label">лет опыта<br>в тонировке</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Преимущества. Иконки — встроенный SVG: рисуется линиями (stroke),
+             цвет берётся из CSS (currentColor), при увеличении не размывается -->
+        <ul class="features">
+          <li class="feature" data-reveal>
+            <span class="feature__num">01</span>
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 16 10 5 10-5"/></svg>
+            </span>
+            <h3 class="feature__title">Качественная плёнка</h3>
+            <p class="feature__text">Работаю только с сертифицированными плёнками известных производителей. Не выгорают и не пузырятся.</p>
+          </li>
+          <li class="feature" data-reveal>
+            <span class="feature__num">02</span>
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 6.8L21 12l-6.8 2.2L12 21l-2.2-6.8L3 12l6.8-2.2L12 3Z"/></svg>
+            </span>
+            <h3 class="feature__title">Аккуратная работа</h3>
+            <p class="feature__text">Ровные края, ни пылинки под плёнкой. Салон и уплотнители остаются в том же виде, что и были.</p>
+          </li>
+          <li class="feature" data-reveal>
+            <span class="feature__num">03</span>
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            </span>
+            <h3 class="feature__title">Точные сроки</h3>
+            <p class="feature__text">Задняя полусфера — за 2–3 часа, полная тонировка — за день. Называю время заранее и укладываюсь в него.</p>
+          </li>
+          <li class="feature" data-reveal>
+            <span class="feature__num">04</span>
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5Z"/><path d="M14 3v5h5"/><path d="m9 14 2 2 4-4"/></svg>
+            </span>
+            <h3 class="feature__title">Плёнка по закону</h3>
+            <p class="feature__text">Подскажу, что можно клеить на передние стёкла, а что — только на заднюю полусферу, чтобы не было вопросов у ГИБДД.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== УСЛУГИ И ЦЕНЫ ===================== -->
+    <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Услуги и цены</p>
+          <h2 class="section__title">Что я делаю</h2>
+          <p class="section__subtitle">
+            Цена зависит от класса автомобиля и выбранной плёнки.
+            Точную стоимость назову после осмотра — до начала работы.
+          </p>
+        </div>
+
+        <!-- ВРЕМЕННО: цены и сроки — примеры. Впиши реальные.
+             data-service у кнопки — название услуги: на этапе 5 форма записи
+             сама подставит его в поле «Услуга», когда человек нажмёт «Записаться» -->
+        <ul class="services">
+          <li class="service service--popular" data-reveal>
+            <span class="service__badge">Популярно</span>
+            <h3 class="service__title">Задняя полусфера</h3>
+            <p class="service__text">Задние боковые стёкла и заднее стекло. Можно любую степень затемнения.</p>
+            <p class="service__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              2–3 часа
+            </p>
+            <div class="service__footer">
+              <p class="service__price">от 4 000 ₽</p>
+              <a href="#booking" class="service__link" data-service="Тонировка задней полусферы">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3 class="service__title">Передние стёкла</h3>
+            <p class="service__text">Светлые атермальные плёнки: меньше жары и бликов в салоне, в рамках нормы ГОСТ.</p>
+            <p class="service__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              около 1 часа
+            </p>
+            <div class="service__footer">
+              <p class="service__price">от 2 500 ₽</p>
+              <a href="#booking" class="service__link" data-service="Тонировка передних стёкол">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3 class="service__title">Лобовое стекло</h3>
+            <p class="service__text">Атермальная плёнка на всё стекло или солнцезащитная полоса сверху.</p>
+            <p class="service__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              1–2 часа
+            </p>
+            <div class="service__footer">
+              <p class="service__price">от 3 000 ₽</p>
+              <a href="#booking" class="service__link" data-service="Тонировка лобового стекла">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3 class="service__title">Полная тонировка</h3>
+            <p class="service__text">Все стёкла автомобиля под ключ: подберу плёнки для каждой зоны.</p>
+            <p class="service__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              от 4 часов
+            </p>
+            <div class="service__footer">
+              <p class="service__price">от 8 000 ₽</p>
+              <a href="#booking" class="service__link" data-service="Полная тонировка">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li class="service" data-reveal>
+            <h3 class="service__title">Снятие плёнки</h3>
+            <p class="service__text">Аккуратно, без следов клея и без повреждения нитей обогрева заднего стекла.</p>
+            <p class="service__time">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              1–2 часа
+            </p>
+            <div class="service__footer">
+              <p class="service__price">от 1 500 ₽</p>
+              <a href="#booking" class="service__link" data-service="Снятие плёнки">Записаться <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <!-- Шестая карточка закрывает сетку 3×2 и даёт выход тем, кто не нашёл свою услугу -->
+          <li class="service service--cta" data-reveal>
+            <h3 class="service__title">Нужно что-то другое?</h3>
+            <p class="service__text">Тонировка фар, отдельного стекла или нестандартная задача — напишите, обсудим.</p>
+            <a href="#" class="btn btn--primary service__cta-btn" data-link="telegram" target="_blank" rel="noopener">Написать в Telegram</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== КАК ПРОХОДИТ РАБОТА ===================== -->
+    <!-- ol — нумерованный список: шаги идут по порядку, и это важно по смыслу -->
+    <section class="section section--dark" id="process">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Как проходит работа</p>
+          <h2 class="section__title">Четыре шага до готовой машины</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step" data-reveal>
+            <span class="step__num">01</span>
+            <h3 class="step__title">Заявка</h3>
+            <p class="step__text">Оставьте заявку на сайте<span data-telegram-only> или напишите в Telegram</span> — договоримся о дне и времени.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">02</span>
+            <h3 class="step__title">Подбор плёнки</h3>
+            <p class="step__text">Обсудим степень затемнения, покажу образцы на вашем стекле и назову точную цену.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">03</span>
+            <h3 class="step__title">Тонировка</h3>
+            <p class="step__text">Мою и обезжириваю стёкла, клею плёнку в чистом боксе без пыли.</p>
+          </li>
+          <li class="step" data-reveal>
+            <span class="step__num">04</span>
+            <h3 class="step__title">Готово</h3>
+            <p class="step__text">Вместе проверяем результат. Расскажу, как ухаживать за плёнкой в первые дни.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== ГАЛЕРЕЯ ===================== -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Портфолио</p>
+          <h2 class="section__title">Наши работы</h2>
+          <p class="section__subtitle">Нажмите на фото, чтобы посмотреть крупнее.</p>
+        </div>
+
+        <!-- Пустой список: gallery.js заполнит его фотографиями из config.js -->
+        <ul class="gallery" id="gallery-grid"></ul>
+
+        <div class="gallery__cta" data-reveal>
+          <p class="gallery__cta-text">Хотите такой же результат?</p>
+          <a href="#booking" class="btn btn--primary">Записаться</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Лайтбокс — окно для просмотра фото на весь экран.
+         <dialog> — встроенный в браузер элемент для модальных окон:
+         сам закрывается по Esc, не пускает фокус клавиатуры «за» окно
+         и возвращает его обратно, когда окно закрыто -->
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр фото">
+      <div class="lightbox__top">
+        <!-- aria-live: диктор прочитает «3 из 9», когда фото сменится -->
+        <p class="lightbox__counter" id="lightbox-counter" aria-live="polite">1 / 9</p>
+        <button class="lightbox__btn lightbox__close" id="lightbox-close" type="button" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+
+      <div class="lightbox__stage" id="lightbox-stage">
+        <button class="lightbox__btn lightbox__nav lightbox__nav--prev" id="lightbox-prev" type="button" aria-label="Предыдущее фото">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
+        </button>
+        <img class="lightbox__img" id="lightbox-img" src="" alt="">
+        <button class="lightbox__btn lightbox__nav lightbox__nav--next" id="lightbox-next" type="button" aria-label="Следующее фото">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <p class="lightbox__caption" id="lightbox-caption"></p>
+    </dialog>
+
+    <!-- ===================== ЧАСТЫЕ ВОПРОСЫ ===================== -->
+    <section class="section section--alt" id="faq">
+      <div class="container faq__grid">
+        <div class="faq__intro" data-reveal>
+          <p class="eyebrow">Частые вопросы</p>
+          <h2 class="section__title">Что важно знать до записи</h2>
+          <p class="section__subtitle">Не нашли ответ? Напишите — отвечу на любой вопрос о тонировке.</p>
+          <a href="#" class="btn btn--dark" data-link="telegram" target="_blank" rel="noopener">Задать вопрос в Telegram</a>
+        </div>
+
+        <!-- details/summary — готовая «гармошка» из HTML, работает без JavaScript.
+             Одинаковый name у всех details: при открытии одного вопроса остальные закрываются -->
+        <!-- ВРЕМЕННО: ответы — примеры, сверь с мастером -->
+        <div class="faq__list">
+          <details class="faq__item" name="faq" data-reveal open>
+            <summary class="faq__question">Можно ли тонировать передние стёкла?</summary>
+            <div class="faq__answer">
+              <p>По закону лобовое и передние боковые стёкла вместе с плёнкой должны пропускать не меньше 70% света. Для них подбираю светлые атермальные плёнки, которые укладываются в норму. Заднюю полусферу при наличии двух боковых зеркал можно тонировать сильнее.</p>
+            </div>
+          </details>
+          <details class="faq__item" name="faq" data-reveal>
+            <summary class="faq__question">Сколько времени занимает тонировка?</summary>
+            <div class="faq__answer">
+              <p>Задняя полусфера — 2–3 часа, передние стёкла — около часа, полная тонировка — от 4 часов. Точное время назову при записи.</p>
+            </div>
+          </details>
+          <details class="faq__item" name="faq" data-reveal>
+            <summary class="faq__question">Нужно ли как-то готовить машину?</summary>
+            <div class="faq__answer">
+              <p>Желательно приехать на чистой машине: так в бокс попадёт меньше пыли, и работа пойдёт быстрее. Остальное — мойку и обезжиривание стёкол — сделаю сам.</p>
+            </div>
+          </details>
+          <details class="faq__item" name="faq" data-reveal>
+            <summary class="faq__question">Когда можно опускать стёкла после тонировки?</summary>
+            <div class="faq__answer">
+              <p>Не опускайте боковые стёкла 3–5 дней, пока клеевой слой окончательно не высохнет. Иначе плёнка может отойти по краю.</p>
+            </div>
+          </details>
+          <details class="faq__item" name="faq" data-reveal>
+            <summary class="faq__question">Как ухаживать за тонировкой?</summary>
+            <div class="faq__answer">
+              <p>Первую неделю не мойте стёкла изнутри. Потом — мягкая салфетка и средство без аммиака и абразивов. Не используйте скребки и жёсткие губки.</p>
+            </div>
+          </details>
+          <details class="faq__item" name="faq" data-reveal>
+            <summary class="faq__question">Можно ли снять старую плёнку?</summary>
+            <div class="faq__answer">
+              <p>Да. Сниму аккуратно, уберу остатки клея и не поврежу нити обогрева на заднем стекле. Можно сразу наклеить новую.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== КОНТАКТЫ И ЗАПИСЬ ===================== -->
+    <section class="section" id="contacts">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <p class="eyebrow">Контакты</p>
+          <h2 class="section__title">Запишитесь на тонировку</h2>
+          <p class="section__subtitle">Оставьте заявку — перезвоню и подтвержу время.<span data-telegram-only> Или напишите в Telegram, если так удобнее.</span></p>
+        </div>
+
+        <div class="contacts__grid">
+          <!-- ----- Контакты (данные подставляет main.js из config.js) ----- -->
+          <div class="contacts__info" data-reveal>
+            <div class="contact-card">
+              <ul class="contact-card__list">
+                <li class="contact-card__item">
+                  <span class="contact-card__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                  </span>
+                  <div>
+                    <p class="contact-card__label">Телефон</p>
+                    <a href="tel:+79000000000" class="contact-card__value" data-link="phone" data-config="phoneDisplay">+7 (900) 000-00-00</a>
+                  </div>
+                </li>
+                <li class="contact-card__item" data-telegram-only>
+                  <span class="contact-card__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 4-18 7 6.5 2.5M21 4l-3 16-8.5-6.5M21 4 9.5 13.5V19l3-3.5"/></svg>
+                  </span>
+                  <div>
+                    <p class="contact-card__label">Telegram</p>
+                    <a href="#" class="contact-card__value" data-link="telegram" data-config="telegramName" target="_blank" rel="noopener"></a>
+                  </div>
+                </li>
+                <li class="contact-card__item">
+                  <span class="contact-card__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                  </span>
+                  <div>
+                    <p class="contact-card__label">Адрес</p>
+                    <p class="contact-card__value" data-config="address">г. Ставрополь, ул. Примерная, 1</p>
+                  </div>
+                </li>
+                <li class="contact-card__item">
+                  <span class="contact-card__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  </span>
+                  <div>
+                    <p class="contact-card__label">Часы работы</p>
+                    <p class="contact-card__value" data-config="workHours">Ежедневно 9:00–20:00</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="contact-card__buttons">
+                <a href="tel:+79000000000" class="btn btn--primary" data-link="phone">Позвонить</a>
+                <a href="#" class="btn btn--ghost" data-telegram-only data-link="telegram" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+
+            <!-- ВРЕМЕННО: заглушка карты. Настоящую карту можно встроить из конструктора
+                 Яндекс Карт (yandex.ru/map-constructor): он выдаст код <iframe>,
+                 его нужно вставить сюда вместо содержимого блока .map -->
+            <div class="map">
+              <span class="map__pin" aria-hidden="true"></span>
+              <p class="map__address" data-config="address">г. Ставрополь, ул. Примерная, 1</p>
+              <a href="#" class="map__link" data-link="map" target="_blank" rel="noopener">Открыть в Яндекс Картах <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <!-- ----- Форма записи -----
+               novalidate отключает стандартные всплывающие подсказки браузера:
+               ошибки покажет form.js — понятным текстом прямо под полем.
+               required и другие атрибуты всё равно нужны: по ним form.js и проверяет поля -->
+          <form class="booking" id="booking" novalidate data-reveal>
+            <h3 class="booking__title">Заявка на запись</h3>
+
+            <div class="booking__grid">
+              <div class="field">
+                <label class="field__label" for="f-name">Ваше имя <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-name" name="name" type="text" required minlength="2" maxlength="50"
+                       autocomplete="name" placeholder="Например, Алексей">
+                <p class="field__error" id="f-name-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-phone">Телефон <span class="field__req" aria-hidden="true">*</span></label>
+                <!-- type="tel" + inputmode: на телефоне откроется цифровая клавиатура -->
+                <input class="field__input" id="f-phone" name="phone" type="tel" required inputmode="tel"
+                       autocomplete="tel" placeholder="+7 (___) ___-__-__">
+                <p class="field__error" id="f-phone-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-car">Марка и модель авто <span class="field__req" aria-hidden="true">*</span></label>
+                <input class="field__input" id="f-car" name="car" type="text" required minlength="2" maxlength="60"
+                       placeholder="Например, Lada Vesta">
+                <p class="field__error" id="f-car-error"></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="f-service">Услуга <span class="field__req" aria-hidden="true">*</span></label>
+                <select class="field__input field__select" id="f-service" name="service" required>
+                  <option value="" disabled selected>Выберите услугу</option>
+                  <option>Тонировка задней полусферы</option>
+                  <option>Тонировка передних стёкол</option>
+                  <option>Тонировка лобового стекла</option>
+                  <option>Полная тонировка</option>
+                  <option>Снятие плёнки</option>
+                  <option>Другое</option>
+                </select>
+                <p class="field__error" id="f-service-error"></p>
+              </div>
+
+              <div class="field field--wide">
+                <label class="field__label" for="f-date">Удобная дата</label>
+                <input class="field__input" id="f-date" name="date" type="date">
+                <p class="field__error" id="f-date-error"></p>
+              </div>
+
+              <div class="field field--wide">
+                <label class="field__label" for="f-comment">Комментарий</label>
+                <textarea class="field__input field__textarea" id="f-comment" name="comment" rows="3" maxlength="500"
+                          placeholder="Какое затемнение хотите, удобное время и т.п."></textarea>
+              </div>
+
+              <!-- Ловушка для спам-ботов: человек это поле не видит и не заполняет,
+                   а бот заполняет все поля подряд. Если оно не пустое — заявку не принимаем -->
+              <div class="booking__trap" aria-hidden="true">
+                <label for="f-website">Не заполняйте это поле</label>
+                <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="field field--wide">
+                <label class="checkbox">
+                  <input class="checkbox__input" id="f-consent" name="consent" type="checkbox" required>
+                  <!-- target="_blank": документ откроется в новой вкладке, и заполненная форма не потеряется -->
+                  <span>
+                    Согласен на <a href="consent.html" target="_blank">обработку персональных данных</a>
+                    в соответствии с <a href="privacy.html" target="_blank">политикой</a>
+                    <span class="field__req" aria-hidden="true">*</span>
+                  </span>
+                </label>
+                <p class="field__error" id="f-consent-error"></p>
+              </div>
+            </div>
+
+            <button class="btn btn--primary btn--lg booking__submit" type="submit">Отправить заявку</button>
+
+            <!-- Сюда form.js выводит «Заявка отправлена» или сообщение об ошибке -->
+            <div class="booking__status" id="booking-status" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== ПОДВАЛ ===================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="logo">TONIROVKA<span class="logo__accent">126</span></a>
+        <p class="footer__text">Тонировка автомобилей в Ставрополе. Аккуратно, качественно, в срок.</p>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Меню</h3>
+        <ul class="footer__list">
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#services">Услуги и цены</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer__title">Контакты</h3>
+        <!-- Текст внутри — запасной вариант. main.js заменит его данными из config.js -->
+        <ul class="footer__list">
+          <li><a href="tel:+79000000000" data-link="phone" data-config="phoneDisplay">+7 (900) 000-00-00</a></li>
+          <li data-telegram-only><a href="#" data-link="telegram" data-config="telegramName" target="_blank" rel="noopener"></a></li>
+          <li data-config="address">г. Ставрополь, ул. Примерная, 1</li>
+          <li data-config="workHours">Ежедневно 9:00–20:00</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Tonirovka 126. Все права защищены.</p>
+      <ul class="footer__legal">
+        <li><a href="privacy.html">Политика обработки персональных данных</a></li>
+        <li><a href="consent.html">Согласие на обработку данных</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>

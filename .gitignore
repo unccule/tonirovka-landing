@@ -1,0 +1,8 @@
+# Секреты: настоящий конфиг бота для PHP-варианта
+server/beget-paid/tg-config.php
+.env
+node_modules/
+*.log
+Thumbs.db
+desktop.ini
+.DS_Store
