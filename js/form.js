@@ -119,6 +119,12 @@
     // Сайт открыт на своём компьютере (файлом или через localhost), а не на хостинге
     const isLocal = location.protocol === 'file:' || ['localhost', '127.0.0.1'].includes(location.hostname);
 
+    // Копия сайта для портфолио на GitHub Pages: заявки никуда не уходят, и мы честно об этом пишем
+    if (!endpoint && location.hostname.endsWith('.github.io')) {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      return 'portfolio';
+    }
+
     if (!endpoint) {
       // ДЕМО-РЕЖИМ только на своём компьютере: делаем вид, что отправляем (1 секунда)
       if (isLocal) {
@@ -178,10 +184,12 @@
 
     try {
       // Бот заполнил скрытое поле — тихо «принимаем» заявку, но никуда её не отправляем
-      if (!data.website) await sendRequest(data);
+      const result = data.website ? null : await sendRequest(data);
 
       showStatus('success', [
-        `Спасибо, ${name}! Заявка отправлена — скоро перезвоню, чтобы подтвердить время.`,
+        result === 'portfolio'
+          ? 'Это демо-версия сайта для портфолио: форма работает, но заявка никуда не отправлена.'
+          : `Спасибо, ${name}! Заявка отправлена — скоро перезвоню, чтобы подтвердить время.`,
       ]);
       form.reset();
       dateInput.min = todayISO();
