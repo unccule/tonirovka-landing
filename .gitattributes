@@ -1,0 +1,2 @@
+# Строку ниже добавил graphify: как склеивать граф при слиянии веток (сам граф в git не хранится, это на будущее)
+graphify-out/graph.json merge=graphify

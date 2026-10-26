@@ -6,3 +6,6 @@ node_modules/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Граф проекта от graphify — карта кода для Claude, собирается сама, в git не нужна
+graphify-out/
